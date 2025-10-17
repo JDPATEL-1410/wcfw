@@ -151,7 +151,7 @@ const Navbar = () => {
                   <span className="ml-2">Contact on WhatsApp</span>
                 </a>
                 <Link
-                  to="/login"
+                  to="https://login.wcfw.in/"
                   onClick={() => setIsOpen(false)}
                   className="block text-center bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white px-5 py-3.5 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-md font-semibold"
                 >
