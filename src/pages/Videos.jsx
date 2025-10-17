@@ -231,7 +231,7 @@ const videos = [
           </div>
 
           <h1 className="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
-            WeCare Investment <span className="bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">Videos</span>
+            WeCare's <span className="bg-gradient-to-r from-orange-600 to-yellow-600 bg-clip-text text-transparent">Videos</span>
           </h1>
 
           <p className="text-gray-600 text-lg mb-8 max-w-3xl mx-auto">
@@ -401,3 +401,4 @@ const videos = [
 };
 
 export default Videos;
+
