@@ -520,7 +520,7 @@ const teamDepartments = [
             className="text-center"
           >
             <h1 className="text-5xl font-bold mb-6">
-              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">WeCare Investment</span>
+              About <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">WeCare</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
               We are on a Mission to educate people about Financial Literacy and help them to live a Financially healthy and stress-free life, so that they Live Well and Die Respectfully.
