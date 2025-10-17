@@ -1,4 +1,4 @@
-# The Happyness Culture - Financial Services Website
+# WeCare Freedom Wealth Pvt. Ltd. - Financial Services Website
 
 A modern, responsive React.js website for financial planning and mutual fund SIP services.
 
