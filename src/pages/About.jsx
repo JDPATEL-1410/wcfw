@@ -836,7 +836,7 @@ const teamDepartments = [
                   <div className="text-gray-600">Cities</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-3xl font-bold text-orange-600">15+</div>
+                  <div className="text-3xl font-bold text-orange-600">22+</div>
                   <div className="text-gray-600">Years</div>
                 </div>
               </div>
