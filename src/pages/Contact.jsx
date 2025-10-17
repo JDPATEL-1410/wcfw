@@ -144,7 +144,7 @@ const socialLinks = [
             className="text-center"
           >
             <h1 className="text-5xl font-bold mb-6">
-              WeCare Investment : <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Contact us</span>
+              WeCare  : <span className="text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500">Contact us</span>
             </h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed mb-8">
               Ready to start your financial journey? Our expert advisors across Anand, Ahmedabad, and Vadodara are here to help you achieve your financial goals. Schedule a free consultation today!
