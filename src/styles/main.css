@@ -1,0 +1,596 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Custom CSS Variables - Logo Theme Inspired */
+:root {
+  --primary-orange: #f97316;
+  --primary-dark: #ea580c;
+  --accent-yellow: #fbbf24;
+  --warm-gradient-start: #fbbf24;
+  --warm-gradient-end: #f97316;
+  --dark-text: #1f2937;
+  --light-bg: #fff7ed;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+.text-transparent {
+  color: #ea580c;
+}
+
+::-webkit-scrollbar-track {
+  background: #fff7ed;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #fbbf24 0%, #f97316 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #f59e0b 0%, #ea580c 100%);
+}
+
+/* Smooth scroll behavior */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom button styles */
+.btn-primary {
+  @apply bg-gradient-to-r from-yellow-400 to-orange-500 hover:from-yellow-500 hover:to-orange-600 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+}
+
+.btn-secondary {
+  @apply bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-semibold py-3 px-8 rounded-xl transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+}
+
+.btn-outline {
+  @apply border-2 border-orange-500 text-orange-500 hover:bg-gradient-to-r hover:from-yellow-400 hover:to-orange-500 hover:text-white hover:border-transparent font-semibold py-3 px-8 rounded-xl transition-all duration-300;
+}
+
+/* Card hover effects */
+.card-hover {
+  @apply transform transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+}
+
+/* Gradient backgrounds */
+.bg-gradient-primary {
+  background: linear-gradient(135deg, #fbbf24 0%, #f97316 50%, #ea580c 100%);
+}
+
+.bg-gradient-success {
+  background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+}
+
+.bg-gradient-warm {
+  background: linear-gradient(135deg, #fffbeb 0%, #fff7ed 50%, #ffedd5 100%);
+}
+
+.bg-gradient-hero {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #4b5563 100%);
+}
+
+.bg-gradient-sunset {
+  background: linear-gradient(135deg, #fbbf24 0%, #f59e0b 25%, #f97316 50%, #ea580c 75%, #dc2626 100%);
+}
+
+/* Text gradients */
+.text-gradient {
+  @apply bg-gradient-to-r from-yellow-400 via-orange-500 to-orange-600 bg-clip-text text-transparent;
+}
+
+.text-gradient-warm {
+  @apply bg-gradient-to-r from-amber-500 to-orange-600 bg-clip-text text-transparent;
+}
+
+/* Animation delays */
+.animate-delay-100 {
+  animation-delay: 0.1s;
+}
+
+.animate-delay-200 {
+  animation-delay: 0.2s;
+}
+
+.animate-delay-300 {
+  animation-delay: 0.3s;
+}
+
+.animate-delay-400 {
+  animation-delay: 0.4s;
+}
+
+/* Custom hero background pattern */
+.hero-bg {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(251, 191, 36, 0.15) 1px, transparent 0);
+  background-size: 20px 20px;
+  background-color: #1f2937;
+}
+
+.hero-bg-light {
+  background-image: 
+    radial-gradient(circle at 1px 1px, rgba(249, 115, 22, 0.1) 1px, transparent 0);
+  background-size: 20px 20px;
+  background-color: #fffbeb;
+}
+
+/* Loading spinner */
+.spinner {
+  border: 4px solid #fff7ed;
+  border-top: 4px solid #f97316;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 640px) {
+  .btn-primary, .btn-secondary, .btn-outline {
+    @apply py-2 px-6 text-sm;
+  }
+}
+
+/* Focus styles for accessibility */
+button:focus,
+input:focus,
+textarea:focus,
+select:focus {
+  @apply ring-2 ring-orange-500 ring-opacity-50 outline-none;
+}
+
+/* Custom form styles */
+.form-input {
+  @apply w-full py-3 border border-orange-200 rounded-lg focus:ring-2 focus:ring-orange-500 focus:border-transparent transition-all duration-200 bg-white;
+}
+
+.form-label {
+  @apply block text-sm font-semibold text-gray-700 mb-2;
+}
+
+/* Chart container styles */
+.chart-container {
+  @apply bg-white p-6 rounded-xl shadow-lg border border-orange-100;
+}
+
+/* Testimonial card styles */
+.testimonial-card {
+  @apply bg-gradient-to-br from-white to-orange-50 p-8 rounded-2xl shadow-xl border border-orange-100 transform transition-all duration-300 hover:scale-105 hover:shadow-2xl;
+}
+
+/* Service card styles */
+.service-card {
+  @apply bg-white p-8 rounded-2xl shadow-lg border border-orange-100 hover:shadow-2xl hover:border-orange-300 transition-all duration-300 relative overflow-hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #fbbf24 0%, #f97316 100%);
+}
+
+/* Footer styles */
+.footer-link {
+  @apply text-orange-200 hover:text-white transition-colors duration-200;
+}
+
+.footer-gradient {
+  background: linear-gradient(135deg, #1f2937 0%, #374151 100%);
+}
+
+/* Custom slider styles */
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(249, 115, 22, 0.3);
+}
+
+.slider::-moz-range-thumb {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #fbbf24 0%, #f97316 100%);
+  cursor: pointer;
+  border: 2px solid #ffffff;
+  box-shadow: 0 2px 4px rgba(249, 115, 22, 0.3);
+}
+
+/* Mobile menu animation */
+@media (max-width: 1023px) {
+  .mobile-menu-enter {
+    opacity: 0;
+    max-height: 0;
+  }
+  .mobile-menu-enter-active {
+    opacity: 1;
+    max-height: 500px;
+    transition: opacity 300ms, max-height 300ms;
+  }
+  .mobile-menu-exit {
+    opacity: 1;
+    max-height: 500px;
+  }
+  .mobile-menu-exit-active {
+    opacity: 0;
+    max-height: 0;
+    transition: opacity 300ms, max-height 300ms;
+  }
+}
+
+/* Additional warm color utilities */
+.bg-warm-light {
+  background-color: #fffbeb;
+}
+
+.bg-warm-lighter {
+  background-color: #fef3c7;
+}
+
+.border-warm {
+  border-color: #fed7aa;
+}
+
+.shadow-warm {
+  box-shadow: 0 10px 40px rgba(249, 115, 22, 0.15);
+}
+
+.shadow-warm-lg {
+  box-shadow: 0 20px 60px rgba(249, 115, 22, 0.2);
+}
+
+/* Accent highlights */
+.accent-bar {
+  position: relative;
+}
+
+.accent-bar::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #fbbf24 0%, #f97316 100%);
+  border-radius: 2px;
+}
+
+/* Icon background styles */
+.icon-bg-gradient {
+  background: linear-gradient(135deg, #fef3c7 0%, #fed7aa 100%);
+}
+
+.icon-bg-solid {
+  background-color: #fff7ed;
+}
+
+
+
+
+/* Custom Slider Styling */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #f97316, #eab308);
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+  transition: all 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.6);
+}
+
+input[type="range"]::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  background: linear-gradient(135deg, #f97316, #eab308);
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+  box-shadow: 0 4px 12px rgba(249, 115, 22, 0.4);
+  transition: all 0.3s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+  transform: scale(1.2);
+  box-shadow: 0 6px 16px rgba(249, 115, 22, 0.6);
+}
+
+
+
+
+/* ===== ONLY CALCULATOR CLASSES ===== */
+.sip-calculator,
+.lumpsum-calculator,
+.swp-calculator,
+.stp-calculator,
+.retirement-calculator,
+.delay-calculator,
+.emi-calculator,
+.insurance-calculator,
+.tax-calculator,
+.marriage-calculator,
+.education-calculator,
+.home-loan-calculator,
+.car-loan-calculator,
+.vacation-calculator {
+  padding-top: 2rem !important;
+  padding-bottom: 1.5rem !important;
+  padding-left: 1.5rem !important;
+  padding-right: 1.5rem !important;
+  overflow-x: hidden !important;
+  max-width: 100% !important;
+  width: 100% !important;
+}
+
+/* ===== MOBILE - CALCULATOR ONLY ===== */
+@media (max-width: 640px) {
+  /* Only calculators */
+  .sip-calculator,
+  .lumpsum-calculator,
+  .swp-calculator,
+  .stp-calculator,
+  .retirement-calculator,
+  .delay-calculator,
+  .emi-calculator,
+  .insurance-calculator,
+  .tax-calculator,
+  .marriage-calculator,
+  .education-calculator,
+  .home-loan-calculator,
+  .car-loan-calculator,
+  .vacation-calculator {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1rem !important;
+    padding-left: 0.875rem !important;
+    padding-right: 0.875rem !important;
+  }
+  
+  /* Grid inside calculators only */
+  .sip-calculator .grid,
+  .lumpsum-calculator .grid,
+  .swp-calculator .grid,
+  .stp-calculator .grid,
+  .retirement-calculator .grid,
+  .delay-calculator .grid,
+  .emi-calculator .grid,
+  .insurance-calculator .grid,
+  .tax-calculator .grid,
+  .marriage-calculator .grid,
+  .education-calculator .grid,
+  .home-loan-calculator .grid,
+  .car-loan-calculator .grid,
+  .vacation-calculator .grid {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    gap: 1rem !important;
+  }
+  
+  .sip-calculator .grid > *,
+  .lumpsum-calculator .grid > *,
+  .swp-calculator .grid > *,
+  .stp-calculator .grid > *,
+  .retirement-calculator .grid > *,
+  .delay-calculator .grid > *,
+  .emi-calculator .grid > *,
+  .insurance-calculator .grid > *,
+  .tax-calculator .grid > *,
+  .marriage-calculator .grid > *,
+  .education-calculator .grid > *,
+  .home-loan-calculator .grid > *,
+  .car-loan-calculator .grid > *,
+  .vacation-calculator .grid > * {
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  
+  /* Column classes inside calculators */
+  .sip-calculator .lg\:grid-cols-5,
+  .lumpsum-calculator .lg\:grid-cols-5,
+  .swp-calculator .lg\:grid-cols-5,
+  .stp-calculator .lg\:grid-cols-5,
+  .retirement-calculator .lg\:grid-cols-5,
+  .delay-calculator .lg\:grid-cols-5,
+  .emi-calculator .lg\:grid-cols-5,
+  .insurance-calculator .lg\:grid-cols-5,
+  .tax-calculator .lg\:grid-cols-5,
+  .marriage-calculator .lg\:grid-cols-5,
+  .education-calculator .lg\:grid-cols-5,
+  .home-loan-calculator .lg\:grid-cols-5,
+  .car-loan-calculator .lg\:grid-cols-5,
+  .vacation-calculator .lg\:grid-cols-5 {
+    display: flex !important;
+    flex-direction: column !important;
+  }
+  
+  .sip-calculator .lg\:col-span-2,
+  .sip-calculator .lg\:col-span-3,
+  .lumpsum-calculator .lg\:col-span-2,
+  .lumpsum-calculator .lg\:col-span-3,
+  .swp-calculator .lg\:col-span-2,
+  .swp-calculator .lg\:col-span-3,
+  .stp-calculator .lg\:col-span-2,
+  .stp-calculator .lg\:col-span-3,
+  .retirement-calculator .lg\:col-span-2,
+  .retirement-calculator .lg\:col-span-3,
+  .delay-calculator .lg\:col-span-2,
+  .delay-calculator .lg\:col-span-3,
+  .emi-calculator .lg\:col-span-2,
+  .emi-calculator .lg\:col-span-3,
+  .insurance-calculator .lg\:col-span-2,
+  .insurance-calculator .lg\:col-span-3,
+  .tax-calculator .lg\:col-span-2,
+  .tax-calculator .lg\:col-span-3,
+  .marriage-calculator .lg\:col-span-2,
+  .marriage-calculator .lg\:col-span-3,
+  .education-calculator .lg\:col-span-2,
+  .education-calculator .lg\:col-span-3,
+  .home-loan-calculator .lg\:col-span-2,
+  .home-loan-calculator .lg\:col-span-3,
+  .car-loan-calculator .lg\:col-span-2,
+  .car-loan-calculator .lg\:col-span-3,
+  .vacation-calculator .lg\:col-span-2,
+  .vacation-calculator .lg\:col-span-3 {
+    width: 100% !important;
+  }
+  
+  /* Padding inside calculators */
+  .sip-calculator .p-6,
+  .sip-calculator .p-8,
+  .lumpsum-calculator .p-6,
+  .lumpsum-calculator .p-8,
+  .swp-calculator .p-6,
+  .swp-calculator .p-8,
+  .stp-calculator .p-6,
+  .stp-calculator .p-8,
+  .retirement-calculator .p-6,
+  .retirement-calculator .p-8,
+  .delay-calculator .p-6,
+  .delay-calculator .p-8,
+  .emi-calculator .p-6,
+  .emi-calculator .p-8,
+  .insurance-calculator .p-6,
+  .insurance-calculator .p-8,
+  .tax-calculator .p-6,
+  .tax-calculator .p-8,
+  .marriage-calculator .p-6,
+  .marriage-calculator .p-8,
+  .education-calculator .p-6,
+  .education-calculator .p-8,
+  .home-loan-calculator .p-6,
+  .home-loan-calculator .p-8,
+  .car-loan-calculator .p-6,
+  .car-loan-calculator .p-8,
+  .vacation-calculator .p-6,
+  .vacation-calculator .p-8 {
+    padding: 0.875rem !important;
+  }
+  
+  /* Spacing inside calculators */
+  .sip-calculator .gap-8,
+  .sip-calculator .gap-6,
+  .lumpsum-calculator .gap-8,
+  .lumpsum-calculator .gap-6,
+  .swp-calculator .gap-8,
+  .swp-calculator .gap-6,
+  .stp-calculator .gap-8,
+  .stp-calculator .gap-6,
+  .retirement-calculator .gap-8,
+  .retirement-calculator .gap-6,
+  .delay-calculator .gap-8,
+  .delay-calculator .gap-6,
+  .emi-calculator .gap-8,
+  .emi-calculator .gap-6,
+  .insurance-calculator .gap-8,
+  .insurance-calculator .gap-6,
+  .tax-calculator .gap-8,
+  .tax-calculator .gap-6,
+  .marriage-calculator .gap-8,
+  .marriage-calculator .gap-6,
+  .education-calculator .gap-8,
+  .education-calculator .gap-6,
+  .home-loan-calculator .gap-8,
+  .home-loan-calculator .gap-6,
+  .car-loan-calculator .gap-8,
+  .car-loan-calculator .gap-6,
+  .vacation-calculator .gap-8,
+  .vacation-calculator .gap-6 {
+    gap: 1rem !important;
+  }
+  
+  /* Text sizes inside calculators */
+  .sip-calculator .text-3xl,
+  .lumpsum-calculator .text-3xl,
+  .swp-calculator .text-3xl,
+  .stp-calculator .text-3xl,
+  .retirement-calculator .text-3xl,
+  .delay-calculator .text-3xl,
+  .emi-calculator .text-3xl,
+  .insurance-calculator .text-3xl,
+  .tax-calculator .text-3xl,
+  .marriage-calculator .text-3xl,
+  .education-calculator .text-3xl,
+  .home-loan-calculator .text-3xl,
+  .car-loan-calculator .text-3xl,
+  .vacation-calculator .text-3xl {
+    font-size: 1.5rem !important;
+  }
+  
+  .sip-calculator .text-2xl,
+  .lumpsum-calculator .text-2xl,
+  .swp-calculator .text-2xl,
+  .stp-calculator .text-2xl,
+  .retirement-calculator .text-2xl,
+  .delay-calculator .text-2xl,
+  .emi-calculator .text-2xl,
+  .insurance-calculator .text-2xl,
+  .tax-calculator .text-2xl,
+  .marriage-calculator .text-2xl,
+  .education-calculator .text-2xl,
+  .home-loan-calculator .text-2xl,
+  .car-loan-calculator .text-2xl,
+  .vacation-calculator .text-2xl {
+    font-size: 1.25rem !important;
+  }
+  
+  /* Buttons inside calculators */
+  .sip-calculator button,
+  .lumpsum-calculator button,
+  .swp-calculator button,
+  .stp-calculator button,
+  .retirement-calculator button,
+  .delay-calculator button,
+  .emi-calculator button,
+  .insurance-calculator button,
+  .tax-calculator button,
+  .marriage-calculator button,
+  .education-calculator button,
+  .home-loan-calculator button,
+  .car-loan-calculator button,
+  .vacation-calculator button {
+    font-size: 0.75rem !important;
+    padding: 0.625rem 0.5rem !important;
+  }
+  
+  /* Charts inside calculators */
+  .sip-calculator .h-80,
+  .lumpsum-calculator .h-80,
+  .swp-calculator .h-80,
+  .stp-calculator .h-80,
+  .retirement-calculator .h-80,
+  .delay-calculator .h-80,
+  .emi-calculator .h-80,
+  .insurance-calculator .h-80,
+  .tax-calculator .h-80,
+  .marriage-calculator .h-80,
+  .education-calculator .h-80,
+  .home-loan-calculator .h-80,
+  .car-loan-calculator .h-80,
+  .vacation-calculator .h-80 {
+    height: 16rem !important;
+  }
+}
